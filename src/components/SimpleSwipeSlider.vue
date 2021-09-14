@@ -1,6 +1,6 @@
 <template>
     <div class="simple-swipe-slider">
-        <div>
+        <div class="slider-container">
             <div ref="imagesContainer" class="images-container">
                 <div v-for="image in images" 
                     :key="image" 
@@ -12,6 +12,11 @@
                     <img :src="image" class="image"/>
                 </div>
             </div>
+        </div>
+        <div class="nav-container">
+            <ul>
+                <li></li>
+            </ul>
         </div>
     </div>
 </template>
@@ -64,7 +69,9 @@ export default {
 
 <style scoped lang="scss">
 .simple-swipe-slider {
-    overflow-x: hidden;
+    .slider-container {
+        overflow-x: hidden;
+    }
 
     .images-container {
         display: flex;
