@@ -1,28 +1,37 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <SimpleSwipeSlider :images="images"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SimpleSwipeSlider from './components/SimpleSwipeSlider.vue'
 
 export default {
   name: 'App',
+  data () {
+    return {
+      images: [
+        "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441600/item/goods_02_441600.jpg?width=400",
+        "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441600/item/goods_12_441600.jpg?width=400",
+        "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441600/item/goods_39_441600.jpg?width=400",
+        "https://image.uniqlo.com/UQ/ST3/AsianCommon/imagesgoods/441600/item/goods_47_441600.jpg?width=400"
+      ]
+    }
+  },
   components: {
-    HelloWorld
+    SimpleSwipeSlider
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
 }
 </style>
